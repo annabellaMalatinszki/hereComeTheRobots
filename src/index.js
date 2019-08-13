@@ -7,8 +7,8 @@ import App from './containers/App';
 import { register } from './serviceWorker';
 import { searchRobots } from './reducers';
 
-const rootReducer = combineReducers(searchRobots);
-const store = createStore(rootReducer);
+// const rootReducer = combineReducers(searchRobots);
+const store = createStore(searchRobots);
 
 ReactDOM.render(
   <Provider store={store}>
