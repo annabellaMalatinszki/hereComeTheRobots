@@ -3,7 +3,7 @@ import Card from './Card';
 
 class App extends React.Component {
   render() {
-    return <Card />;
+    return <Card name="Donald Trump" email="the.donald@trump.com" />;
   }
 }
 
