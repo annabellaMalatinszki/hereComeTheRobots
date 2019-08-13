@@ -35,12 +35,16 @@ class App extends React.Component {
   }
 
   render() {
-    const { onSearchChange } = this.props;
+    const { onSearchChange, searchField } = this.props;
+    const filteredRobots = this.state.robots.filter(robot => {
+      return robot.name.toLowerCase().includes(searchField.toLowerCase());
+    });
+
     return (
       <>
         <h1>Here come the robots</h1>
         <SearchBox searchChange={onSearchChange} />
-        <CardList robots={this.state.robots} />;
+        <CardList robots={filteredRobots} />;
       </>
     );
   }
