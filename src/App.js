@@ -1,9 +1,22 @@
 import React from 'react';
-import Card from './Card';
+import CardList from './CardList';
 
 class App extends React.Component {
   render() {
-    return <Card name="Donald Trump" email="the.donald@trump.com" />;
+    return (
+      <CardList
+        robots={[
+          {
+            name: 'Donald Trump',
+            email: 'the.donald@trump.com'
+          },
+          {
+            name: 'Mike Pence',
+            email: 'mike.pence@whitehouse.org'
+          }
+        ]}
+      />
+    );
   }
 }
 
