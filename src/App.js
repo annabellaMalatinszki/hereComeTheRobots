@@ -20,7 +20,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <CardList robots={this.state.robots} />;
+    return (
+      <>
+        <h1>Here come the robots</h1>
+        <CardList robots={this.state.robots} />;
+      </>
+    );
   }
 }
 
