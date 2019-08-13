@@ -1,13 +1,9 @@
 import React from 'react';
+import Card from './Card';
 
 class App extends React.Component {
   render() {
-    return (
-      <>
-        <h1>Hello there</h1>
-        <p>I am the first component</p>
-      </>
-    );
+    return <Card />;
   }
 }
 
