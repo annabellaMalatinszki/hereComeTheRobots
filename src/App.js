@@ -2,21 +2,25 @@ import React from 'react';
 import CardList from './CardList';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      robots: []
+    };
+  }
+
+  componentDidMount() {
+    const robots = fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        return response.json();
+      })
+      .then(robots => {
+        this.setState({ robots });
+      });
+  }
+
   render() {
-    return (
-      <CardList
-        robots={[
-          {
-            name: 'Donald Trump',
-            email: 'the.donald@trump.com'
-          },
-          {
-            name: 'Mike Pence',
-            email: 'mike.pence@whitehouse.org'
-          }
-        ]}
-      />
-    );
+    return <CardList robots={this.state.robots} />;
   }
 }
 
