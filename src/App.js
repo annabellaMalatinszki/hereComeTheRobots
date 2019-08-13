@@ -1,5 +1,6 @@
 import React from 'react';
 import CardList from './CardList';
+import SearchBox from './SearchBox';
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends React.Component {
     return (
       <>
         <h1>Here come the robots</h1>
+        <SearchBox />
         <CardList robots={this.state.robots} />;
       </>
     );
