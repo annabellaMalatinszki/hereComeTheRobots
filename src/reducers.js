@@ -1,5 +1,4 @@
 import { CHANGE_SEARCHFIELD } from './constants';
-import { isParenthesizedExpression } from '@babel/types';
 
 const initialState = {
   searchField: ''
