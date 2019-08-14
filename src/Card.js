@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ name, email, id }) => {
   return (
-    <div>
+    <div className="tc">
       <img src={`https://robohash.org/${id}`} alt="photo" />
       <div>
         <h2>{name}</h2>
