@@ -6,10 +6,10 @@ import 'tachyons';
 
 import App from './containers/App';
 import { register } from './serviceWorker';
-import { searchRobots } from './reducers';
+import { searchRobots, requestRobots } from './reducers';
 
-// const rootReducer = combineReducers(searchRobots);
-const store = createStore(searchRobots);
+const rootReducer = combineReducers(searchRobots, requestRobots);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
