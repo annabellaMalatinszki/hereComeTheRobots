@@ -41,11 +41,11 @@ class App extends React.Component {
     });
 
     return (
-      <>
+      <div className="tc">
         <h1>Here come the robots</h1>
         <SearchBox searchChange={onSearchChange} />
         <CardList robots={filteredRobots} />;
-      </>
+      </div>
     );
   }
 }
