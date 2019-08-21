@@ -33,8 +33,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { onSearchChange, searchField } = this.props;
-    const filteredRobots = this.state.robots.filter(robot => {
+    const { onSearchChange, searchField, robots } = this.props;
+    const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
     });
 
