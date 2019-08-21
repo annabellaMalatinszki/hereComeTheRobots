@@ -21,13 +21,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      robots: []
-    };
-  }
-
   componentDidMount() {
     this.props.onRequestRobots();
   }
