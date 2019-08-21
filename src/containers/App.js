@@ -33,12 +33,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { onSearchChange, searchField, robots } = this.props;
+    const { onSearchChange, searchField, robots, isPending } = this.props;
     const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
     });
 
-    return (
+    return isPending ? (
+      <h1>Loading...</h1>
+    ) : (
       <>
         <h1>Here come the robots</h1>
         <SearchBox searchChange={onSearchChange} />
