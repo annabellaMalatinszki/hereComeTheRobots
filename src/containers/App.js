@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './App.css';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import { setSearchField, requestRobots } from '../actions';
@@ -34,11 +35,11 @@ class App extends React.Component {
     return isPending ? (
       <h1>Loading...</h1>
     ) : (
-      <>
-        <h1>Here come the robots</h1>
+      <div className="tc">
+        <h1 className="f1">Here come the robots</h1>
         <SearchBox searchChange={onSearchChange} />
         <CardList robots={filteredRobots} />;
-      </>
+      </div>
     );
   }
 }
